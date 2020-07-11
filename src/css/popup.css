@@ -1,0 +1,17 @@
+body {
+    width: 400px;
+    height: 200px;
+}
+
+#DL {
+    width: 300px;
+}
+
+#run {
+    width: 100px;
+    margin-top: 30px;
+}
+
+#error {
+    color: red;
+}
