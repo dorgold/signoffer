@@ -157,7 +157,7 @@ export class Fetcher
         var subject = `Releasing ${repo} to production`;
 
         var commitsStr = commits
-            .map(commit => `${commit.message} [${commit.author.displayName}]`)
+            .map(commit => `${commit.message}             [${commit.author.displayName}]`)
             .join('\n');
         
         console.log(commitsStr)
@@ -172,6 +172,7 @@ ${releaseUrl}
 Commits:
 ${commitsStr}`;
 
-        return `https://outlook.office.com/?path=/mail/action/compose&to=${emails}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        //return `https://outlook.office.com/?path=/mail/action/compose&to=${emails}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        return `mailto:${emails}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     }
 }

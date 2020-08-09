@@ -23,5 +23,5 @@ document.getElementById("run").onclick = async () => {
 // });
 
 Settings.Get("DL")
-    .then(dl => document.getElementById("DL").value = dl);
+    .then(dl => dl && (document.getElementById("DL").value = dl));
 
